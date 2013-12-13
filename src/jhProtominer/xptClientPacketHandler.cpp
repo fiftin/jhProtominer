@@ -204,16 +204,23 @@ bool xptClient_processPacket_command(xptClient_t* xptClient) {
 		return false;
 	switch (command) {
 		case XPT_EXT_S_COMMAND_DIE:
+			printf("Command DIE received.\n");
 			exit(0);
 			break;
 		case XPT_EXT_S_COMMAND_PAUSE:
+			printf("Command PAUSE received.\n");
+			xptClient->paused = true;
 			break;
 		case XPT_EXT_S_COMMAND_RECONNECT:
+			printf("Command RECONNECT received.\n");
 			xptClient->disconnected = true;
 			break;
 		case XPT_EXT_S_COMMAND_RESUME:
+			printf("Command RESUME received.\n");
+			xptClient->paused = false;
 			break;
 		case XPT_EXT_S_COMMAND_THREADS:
+			printf("Command THREADS received.\n");
 			break;
 	}
 	return true;

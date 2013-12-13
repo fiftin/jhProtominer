@@ -49,6 +49,9 @@ typedef struct
 	// shares to submit
 	CRITICAL_SECTION cs_shareSubmit;
 	simpleList_t* list_shareSubmitQueue;
+	// paused
+	bool paused;
+	int numberOfThreads;
 }xptClient_t;
 
 xptClient_t* xptClient_connect(generalRequestTarget_t* target, uint32 payloadNum);

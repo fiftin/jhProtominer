@@ -71,6 +71,14 @@ int jhProtominer_minerThread(int threadIndex)
 {
 	while( true )
 	{
+		if (xptClient->paused) {
+			Sleep(1000);
+			continue;
+		}
+
+		if (xptClient->numberOfThreads > 0 && threadIndex > xptClient->numberOfThreads-1)
+			return 0;
+		
 		// local work data
 		minerProtosharesBlock_t minerProtosharesBlock = {0};
 		// has work?
@@ -179,6 +187,7 @@ void jhProtominer_xptQueryWorkLoop()
 	uint32 timerPrintDetails = GetTickCount() + 8000;
 	while( true )
 	{
+		
 		uint32 currentTick = GetTickCount();
 		if( currentTick >= timerPrintDetails )
 		{
