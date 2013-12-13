@@ -154,6 +154,8 @@ bool xptClient_processPacket(xptClient_t* xptClient)
 		return xptClient_processPacket_shareAck(xptClient);
 	else if( xptClient->opcode == XPT_OPC_S_MESSAGE )
 		return xptClient_processPacket_message(xptClient);
+	else if( xptClient->opcode == XPT_EXT_S_COMMAND)
+		return xptClient_processPacket_command(xptClient);
 	// unknown opcodes are accepted too, for later backward compatibility
 	return true;
 }

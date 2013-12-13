@@ -194,3 +194,27 @@ bool xptClient_processPacket_message(xptClient_t* xptClient)
 	printf("Server message: %s\n", messageText);
 	return true;
 }
+
+bool xptClient_processPacket_command(xptClient_t* xptClient) {
+	xptPacketbuffer_t* cpb = xptClient->recvBuffer;
+	xptPacketbuffer_beginReadPacket(cpb);
+	bool readError = false;
+	uint32 command = xptPacketbuffer_readU32(cpb, &readError);
+	if (readError)
+		return false;
+	switch (command) {
+		case XPT_EXT_S_COMMAND_DIE:
+			exit(0);
+			break;
+		case XPT_EXT_S_COMMAND_PAUSE:
+			break;
+		case XPT_EXT_S_COMMAND_RECONNECT:
+			xptClient->disconnected = true;
+			break;
+		case XPT_EXT_S_COMMAND_RESUME:
+			break;
+		case XPT_EXT_S_COMMAND_THREADS:
+			break;
+	}
+	return true;
+}

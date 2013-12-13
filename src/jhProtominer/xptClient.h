@@ -68,6 +68,7 @@ bool xptClient_processPacket_authResponse(xptClient_t* xptClient);
 bool xptClient_processPacket_blockData1(xptClient_t* xptClient);
 bool xptClient_processPacket_shareAck(xptClient_t* xptClient);
 bool xptClient_processPacket_message(xptClient_t* xptClient);
+bool xptClient_processPacket_command(xptClient_t* xptClient);
 
 // miner version string (needs to be defined somewhere in the project, max 45 characters)
 extern char* minerVersionString;

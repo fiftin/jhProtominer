@@ -11,9 +11,11 @@
 		<Platform
 			Name="Win32"
 		/>
+		<!--
 		<Platform
 			Name="x64"
 		/>
+		-->
 	</Platforms>
 	<ToolFiles>
 	</ToolFiles>
@@ -85,6 +87,7 @@
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
+		<!--
 		<Configuration
 			Name="Debug|x64"
 			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
@@ -153,6 +156,7 @@
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
+		-->
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
@@ -224,6 +228,7 @@
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
+		<!--
 		<Configuration
 			Name="Release|x64"
 			OutputDirectory="$(SolutionDir)$(PlatformName)\$(ConfigurationName)"
@@ -299,6 +304,7 @@
 				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
+		-->
 	</Configurations>
 	<References>
 	</References>

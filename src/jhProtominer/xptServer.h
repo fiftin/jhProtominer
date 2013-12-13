@@ -95,6 +95,15 @@ typedef struct
 #define XPT_OPC_C_SUBMIT_POW	6
 #define XPT_OPC_S_MESSAGE		7
 
+//DENGUK {
+#define XPT_EXT_S_COMMAND		33
+#define XPT_EXT_S_COMMAND_DIE       1
+#define XPT_EXT_S_COMMAND_RECONNECT 2
+#define XPT_EXT_S_COMMAND_PAUSE     3
+#define XPT_EXT_S_COMMAND_RESUME    4
+#define XPT_EXT_S_COMMAND_THREADS   5
+//}DENGUK
+
 // list of error codes
 
 #define XPT_ERROR_NONE				(0)

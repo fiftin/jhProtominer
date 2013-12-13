@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\xpt">
+      <UniqueIdentifier>{0c123036-9542-4d09-8e42-099aee8a71a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jhlib">
+      <UniqueIdentifier>{a600b0c3-8c47-4841-8ea7-52d2bc05fc9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\crypto">
+      <UniqueIdentifier>{bbbc08cc-b6ff-497d-b004-b06db920e87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\transaction">
+      <UniqueIdentifier>{97218862-9e9b-4755-9be5-e669d8880bea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\algorithm">
+      <UniqueIdentifier>{64d9f74c-40b9-4794-803c-84cccd9df693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xptClient.h">
+      <Filter>Source Files\xpt</Filter>
+    </ClInclude>
+    <ClInclude Include="xptServer.h">
+      <Filter>Source Files\xpt</Filter>
+    </ClInclude>
+    <ClInclude Include="jhlib.h">
+      <Filter>Source Files\jhlib</Filter>
+    </ClInclude>
+    <ClInclude Include="sha2.h">
+      <Filter>Source Files\crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="transaction.h">
+      <Filter>Source Files\transaction</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm.h">
+      <Filter>Source Files\algorithm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xptClient.cpp">
+      <Filter>Source Files\xpt</Filter>
+    </ClCompile>
+    <ClCompile Include="xptClientPacketHandler.cpp">
+      <Filter>Source Files\xpt</Filter>
+    </ClCompile>
+    <ClCompile Include="xptPacketbuffer.cpp">
+      <Filter>Source Files\xpt</Filter>
+    </ClCompile>
+    <ClCompile Include="xptServer.cpp">
+      <Filter>Source Files\xpt</Filter>
+    </ClCompile>
+    <ClCompile Include="xptServerPacketHandler.cpp">
+      <Filter>Source Files\xpt</Filter>
+    </ClCompile>
+    <ClCompile Include="jhlib.cpp">
+      <Filter>Source Files\jhlib</Filter>
+    </ClCompile>
+    <ClCompile Include="sha2.cpp">
+      <Filter>Source Files\crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="transaction.cpp">
+      <Filter>Source Files\transaction</Filter>
+    </ClCompile>
+    <ClCompile Include="protosharesMiner.cpp">
+      <Filter>Source Files\algorithm</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
